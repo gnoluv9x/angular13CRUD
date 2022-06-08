@@ -15,4 +15,8 @@ export class ApiService {
   getAllProducts(): Observable<any> {
     return this.http.get('http://localhost:3000/products');
   }
+
+  putProduct(data: any, id: number): Observable<any> {
+    return this.http.put('http://localhost:3000/products' + id, data);
+  }
 }

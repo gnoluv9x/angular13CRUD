@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
     'freshness',
     'price',
     'comment',
+    'actions',
   ];
   dataSource!: MatTableDataSource<any>;
   title = 'AngularCRUD';
@@ -63,5 +64,9 @@ export class AppComponent implements OnInit {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+
+  handleEditProduct(row: any) {
+    this.dialog.open(DialogComponent, { width: '50%', data: row });
   }
 }
