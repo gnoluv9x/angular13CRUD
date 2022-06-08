@@ -1,51 +1,6 @@
 {
   "products": [
     {
-      "productName": "long",
-      "category": "Vegetables",
-      "date": "2022-06-16T17:00:00.000Z",
-      "freshness": "",
-      "price": 10008,
-      "comment": "33333",
-      "id": 1
-    },
-    {
-      "productName": "long",
-      "category": "Vegetables",
-      "date": "2022-06-08T17:00:00.000Z",
-      "freshness": "",
-      "price": 10008,
-      "comment": "56565",
-      "id": 2
-    },
-    {
-      "productName": "nhan",
-      "category": "Vegetables",
-      "date": "2022-06-08T17:00:00.000Z",
-      "freshness": "",
-      "price": 1111,
-      "comment": "11111",
-      "id": 3
-    },
-    {
-      "productName": "long",
-      "category": "Vegetables",
-      "date": "2022-06-08T17:00:00.000Z",
-      "freshness": "",
-      "price": 1111,
-      "comment": "alo",
-      "id": 4
-    },
-    {
-      "productName": "long",
-      "category": "Electronic",
-      "date": "",
-      "freshness": "",
-      "price": 123123,
-      "comment": "123123123",
-      "id": 5
-    },
-    {
       "productName": "cá hồi",
       "category": "Vegetables",
       "date": "2022-06-10T17:00:00.000Z",
@@ -62,6 +17,51 @@
       "price": 111,
       "comment": "abc",
       "id": 7
+    },
+    {
+      "productName": "hoc sinh",
+      "category": "Electronic",
+      "date": "2022-05-02T17:00:00.000Z",
+      "freshness": "Brand New",
+      "price": 123123,
+      "comment": "adfsdfsdfafsdfs",
+      "id": 8
+    },
+    {
+      "productName": "thịt chó",
+      "category": "Electronic",
+      "date": "2022-06-04T17:00:00.000Z",
+      "freshness": "Brand New",
+      "price": 1111,
+      "comment": "anc",
+      "id": 9
+    },
+    {
+      "productName": "thịt Học",
+      "category": "Vegetables",
+      "date": "",
+      "freshness": "Brand New",
+      "price": 1111,
+      "comment": "1111",
+      "id": 10
+    },
+    {
+      "productName": "uhuhuhu",
+      "category": "Electronic",
+      "date": "2022-06-15T17:00:00.000Z",
+      "freshness": "Refurbished",
+      "price": 16555,
+      "comment": "nvvbnvnvvnv",
+      "id": 11
+    },
+    {
+      "productName": "cá ba s",
+      "category": "Electronic",
+      "date": "2022-06-09T17:00:00.000Z",
+      "freshness": "Brand New",
+      "price": 123,
+      "comment": "54545454",
+      "id": 12
     }
   ],
   "comments": [

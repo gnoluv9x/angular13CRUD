@@ -1,8 +1,8 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ApiService } from '../services/api.service';
-import { subscribeOn } from 'rxjs';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import {Component, Inject, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {ApiService} from '../services/api.service';
+import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-dialog',
@@ -18,8 +18,10 @@ export class DialogComponent implements OnInit {
     private formBuilder: FormBuilder,
     private apiService: ApiService,
     private dialogRef: MatDialogRef<DialogComponent>,
+    private _snackbar: MatSnackBar,
     @Inject(MAT_DIALOG_DATA) public editData: any
-  ) {}
+  ) {
+  }
 
   ngOnInit(): void {
     this.productForm = this.formBuilder.group({
@@ -31,7 +33,6 @@ export class DialogComponent implements OnInit {
       comment: ['', Validators.required],
     });
 
-    console.log('this.editData: ', this.editData);
     if (this.editData) {
       this.actionBtn = 'Update';
       this.productForm.controls['productName'].setValue(
@@ -46,12 +47,11 @@ export class DialogComponent implements OnInit {
   }
 
   addProduct() {
-    // console.log('this.productForm.value: ', this.productForm.value);
     if (!this.editData) {
       if (this.productForm.value) {
         this.apiService.postProduct(this.productForm.value).subscribe({
           next: (res) => {
-            alert('add product successfully');
+            this._snackbar.open("Them san pham thanh cmn cong roi!!!!!!!!!!!!!!!!", "Close", { duration: 5000 })
             this.productForm.reset();
             this.dialogRef.close('save');
           },
@@ -66,9 +66,9 @@ export class DialogComponent implements OnInit {
   }
 
   updateProduct() {
-    this.apiService.putProduct(this.editData, this.editData.id).subscribe({
+    this.apiService.putProduct(this.productForm.value, this.editData.id).subscribe({
       next: (res) => {
-        console.log(res);
+        this._snackbar.open("Edit successfully", "Close", { duration: 5000 })
         this.dialogRef.close('updated');
       },
       error: (err) => {

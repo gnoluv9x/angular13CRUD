@@ -1,0 +1,7 @@
+<div mat-dialog-content>
+  Would you like to delete <b>{{product.productName}}</b> - <strong>{{product.price | currency }}</strong>?
+</div>
+<div mat-dialog-actions class="btn__deleteProducts">
+  <button mat-button mat-dialog-close color="primary">No</button>
+  <button mat-button mat-dialog-close cdkFocusInitial (click)="handleRemoveProduct()" color="accent">Yes</button>
+</div>
